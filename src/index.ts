@@ -1,1 +1,1 @@
-export * as CoreGraphics from "@core-graphics/index"
+export * as CoreGraphics from "src/core-graphic/index"

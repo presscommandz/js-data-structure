@@ -1,5 +1,5 @@
-import Size from "@core-graphics/Size"
-import Point from "@core-graphics/Point"
+import Size from "src/core-graphic/Size"
+import Point from "src/core-graphic/Point"
 
 export default class Frame {
     x = 0
@@ -82,12 +82,7 @@ export default class Frame {
     // utilities
 
     isEqual(frame: Frame): boolean {
-        return (
-            this.x == frame.x &&
-            this.y == frame.y &&
-            this.width == frame.width &&
-            this.height == frame.height
-        )
+        return Frame.isEqual(this, frame)
     }
     static isEqual(frameA: Frame, frameB: Frame): boolean {
         return (

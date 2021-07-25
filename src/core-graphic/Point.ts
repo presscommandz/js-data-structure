@@ -17,7 +17,7 @@ export default class Point {
     }
 
     isEqual(point: Point) {
-        return this.x == point.x && this.y == point.y
+        return Point.isEqual(this, point)
     }
 
     private static operator(op: string, a: Point, b: Point): Point {

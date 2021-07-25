@@ -22,7 +22,7 @@ export default class Size {
     }
 
     isEqual(size: Size) {
-        return this.width == size.width && this.height == size.height;
+        return Size.isEqual(this, size)
     }
 
     get isZero(): boolean {
