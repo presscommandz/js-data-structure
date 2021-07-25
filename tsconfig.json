@@ -1,0 +1,29 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "paths": {
+            "@core-graphics/*": ["src/core-graphics/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "declarationDir": "lib",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "inlineSourceMap": false,
+        "module": "ES2015",
+        "lib": ["esnext", "DOM"],
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "moduleResolution": "node",
+        "pretty": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "strict": false,
+        "types": ["node"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/*"]
+}

@@ -1,0 +1,50 @@
+{
+    "name": "@presscommandz/js-data-structure",
+    "version": "0.2.0",
+    "description": "provide svelte component",
+    "main": "lib/index.js",
+    "module": "lib/index.mjs",
+    "typing": "lib/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/presscommandz/js-data-structure.git"
+    },
+    "files": [
+        "src",
+        "lib"
+    ],
+    "keywords": [],
+    "author": "PressCommandZ",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/presscommandz/js-data-structure/issues"
+    },
+    "scripts": {
+        "build": "rimraf lib && rollup -c",
+        "prepublishOnly": "yarn build"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "homepage": "https://github.com/presscommandz/js-data-structure#readme",
+    "dependencies": {
+        "@rollup/plugin-alias": "^3.1.4"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^13.0.0",
+        "@rollup/plugin-typescript": "^8.2.1",
+        "@tsconfig/node14": "^1.0.1",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "cross-env": "^7.0.3",
+        "eslint": "^7.30.0",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.53.1",
+        "rollup-plugin-css-only": "^3.1.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.30.0",
+        "ts-loader": "^9.2.3",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.5"
+    }
+}
