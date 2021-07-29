@@ -2,7 +2,9 @@ export default class Size {
     width = 0
     height = 0
 
-    constructor(params: Partial<{width: number, height: number, size: Size}>) {
+    constructor(
+        params: Partial<{ width: number; height: number; size: Size }>
+    ) {
         const { width, height, size } = params
         if (size) {
             this.width = size.width || 0

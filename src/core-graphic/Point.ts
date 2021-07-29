@@ -2,14 +2,13 @@ export default class Point {
     x = 0
     y = 0
 
-    constructor(params: { x: number; y: number }) {
-        const { x, y } = params
+    constructor(x: number, y: number) {
         this.x = !isNaN(x) ? x : 0
         this.y = !isNaN(y) ? y : 0
     }
 
     static get zero(): Point {
-        return new Point({ x: 0, y: 0 })
+        return new Point(0, 0)
     }
 
     static isEqual(pointA: Point, pointB: Point): boolean {
@@ -23,15 +22,9 @@ export default class Point {
     private static operator(op: string, a: Point, b: Point): Point {
         switch (op) {
             case "-":
-                return new Point({
-                    x: a.x - b.x,
-                    y: a.y - b.y
-                })
+                return new Point(a.x - b.x, a.y - b.y)
             case "+":
-                return new Point({
-                    x: a.x + b.x,
-                    y: a.y + b.y
-                })
+                return new Point(a.x + b.x, a.y + b.y)
             default:
                 return Point.zero
         }

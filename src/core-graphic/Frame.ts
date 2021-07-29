@@ -56,7 +56,7 @@ export default class Frame {
     }
 
     get origin(): Point {
-        const point = new Point({ x: this.x, y: this.y })
+        const point = new Point(this.x, this.y)
         return point
     }
 
@@ -93,17 +93,8 @@ export default class Frame {
         )
     }
 
-    intersect(frame: Frame) {
-        let h =
-            (this.x <= frame.x && frame.x <= this.maxX) ||
-            (this.x <= frame.maxX && frame.maxX <= this.maxX) ||
-            (this.x >= frame.x && frame.maxX >= this.maxX)
-        let v =
-            (this.y <= frame.y && frame.y <= this.maxY) ||
-            (this.y <= frame.maxY && frame.maxY <= this.maxY) ||
-            (this.y >= frame.y && frame.maxY >= this.maxY)
-
-        return h && v
+    intersect(frame: Frame): boolean {
+        return Frame.intersect(this, frame)
     }
 
     static intersect(frameA: Frame, frameB: Frame) {
