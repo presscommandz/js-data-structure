@@ -20,10 +20,7 @@ export default {
         }),
         resolve(),
         alias({
-            resolve: [".ts"],
-            entries: {
-                "@core-graphic": "src/core-graphic"
-            }
+            resolve: [".ts"]
         })
     ]
 }

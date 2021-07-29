@@ -2,9 +2,7 @@
     "extends": "@tsconfig/node14/tsconfig.json",
     "compilerOptions": {
         "allowJs": true,
-        "paths": {
-            "@core-graphic/*": ["src/core-graphic/*"]
-        },
+        "paths": {},
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "declaration": true,
