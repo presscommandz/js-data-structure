@@ -1,5 +1,5 @@
-import Size from "src/core-graphic/Size"
-import Point from "src/core-graphic/Point"
+import Size from "@core-graphic/Size"
+import Point from "@core-graphic/Point"
 
 export default class Frame {
     x = 0
