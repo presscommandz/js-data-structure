@@ -1,4 +1,6 @@
-export default class Point {
+import { Equatable } from "@core/Equatable"
+
+export default class Point implements Equatable {
     x = 0
     y = 0
 
@@ -15,7 +17,7 @@ export default class Point {
         return pointA.x == pointB.x && pointA.y == pointB.y
     }
 
-    isEqual(point: Point) {
+    isEqual(point: Point): boolean {
         return Point.isEqual(this, point)
     }
 

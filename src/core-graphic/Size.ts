@@ -1,4 +1,6 @@
-export default class Size {
+import { Equatable } from "@core/Equatable"
+
+export default class Size implements Equatable {
     width = 0
     height = 0
 
@@ -31,7 +33,7 @@ export default class Size {
         return sizeA.width == sizeB.width && sizeA.height == sizeB.height
     }
 
-    isEqual(size: Size) {
+    isEqual(size: Size): boolean {
         return Size.isEqual(this, size)
     }
 

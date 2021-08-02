@@ -1,7 +1,8 @@
 import Size from "@core-graphic/Size"
 import Point from "@core-graphic/Point"
+import { Equatable } from "@core/Equatable"
 
-export default class Frame {
+export default class Frame implements Equatable {
     x = 0
     y = 0
     width = 0
