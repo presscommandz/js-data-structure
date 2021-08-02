@@ -10,7 +10,6 @@
         "baseUrl": ".",
         "declaration": true,
         "declarationDir": "lib/declare",
-        "declarationMap": true,
         "sourceMap": true,
         "esModuleInterop": true,
         "inlineSourceMap": false,

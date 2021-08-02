@@ -1,8 +1,8 @@
-import Size from "@core-graphic/Size"
-import Point from "@core-graphic/Point"
+import CGSize from "@core-graphic/CGSize"
+import CGPoint from "@core-graphic/CGPoint"
 import { Equatable } from "@core/Equatable"
 
-export default class Frame implements Equatable {
+export default class CGFrame implements Equatable {
     x = 0
     y = 0
     width = 0
@@ -14,8 +14,8 @@ export default class Frame implements Equatable {
             y: number
             width: number
             height: number
-            point: Point
-            size: Size
+            point: CGPoint
+            size: CGSize
         }>
     ) {
         const { x, y, width, height, point, size } = params
@@ -36,8 +36,8 @@ export default class Frame implements Equatable {
         }
     }
 
-    static get zero(): Frame {
-        return new Frame({ x: 0, y: 0, width: 0, height: 0 })
+    static get zero(): CGFrame {
+        return new CGFrame({ x: 0, y: 0, width: 0, height: 0 })
     }
 
     get centerX(): number {
@@ -56,32 +56,32 @@ export default class Frame implements Equatable {
         return this.y + this.height
     }
 
-    get origin(): Point {
-        const point = new Point(this.x, this.y)
+    get origin(): CGPoint {
+        const point = new CGPoint(this.x, this.y)
         return point
     }
 
-    set origin(value: Point) {
+    set origin(value: CGPoint) {
         this.x = value.x
         this.y = value.y
     }
 
-    get size(): Size {
-        const size = new Size({ width: this.width, height: this.height })
+    get size(): CGSize {
+        const size = new CGSize({ width: this.width, height: this.height })
         return size
     }
 
-    set size(value: Size) {
+    set size(value: CGSize) {
         this.width = value.width
         this.height = value.height
     }
 
     get isZero(): boolean {
-        return Frame.isEqual(this, Frame.zero)
+        return CGFrame.isEqual(this, CGFrame.zero)
     }
 
-    static cloneDeep(frame: Frame): Frame {
-        return new Frame({
+    static cloneDeep(frame: CGFrame): CGFrame {
+        return new CGFrame({
             x: frame.x,
             y: frame.y,
             width: frame.width,
@@ -89,16 +89,16 @@ export default class Frame implements Equatable {
         })
     }
 
-    cloneDeep(): Frame {
-        return Frame.cloneDeep(this)
+    cloneDeep(): CGFrame {
+        return CGFrame.cloneDeep(this)
     }
 
     // utilities
 
-    isEqual(frame: Frame): boolean {
-        return Frame.isEqual(this, frame)
+    isEqual(frame: CGFrame): boolean {
+        return CGFrame.isEqual(this, frame)
     }
-    static isEqual(frameA: Frame, frameB: Frame): boolean {
+    static isEqual(frameA: CGFrame, frameB: CGFrame): boolean {
         return (
             frameA.x == frameB.x &&
             frameA.y == frameB.y &&
@@ -107,11 +107,11 @@ export default class Frame implements Equatable {
         )
     }
 
-    intersect(frame: Frame): boolean {
-        return Frame.intersect(this, frame)
+    isIntersect(frame: CGFrame): boolean {
+        return CGFrame.isIntersect(this, frame)
     }
 
-    static intersect(frameA: Frame, frameB: Frame) {
+    static isIntersect(frameA: CGFrame, frameB: CGFrame) {
         let h =
             (frameA.x <= frameB.x && frameB.x <= frameA.maxX) ||
             (frameA.x <= frameB.maxX && frameB.maxX <= frameA.maxX) ||
