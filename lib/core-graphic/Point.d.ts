@@ -5,6 +5,8 @@ export default class Point {
     static get zero(): Point;
     static isEqual(pointA: Point, pointB: Point): boolean;
     isEqual(point: Point): boolean;
+    static deepClone(point: Point): Point;
+    deepClone(): Point;
     private static operator;
     static minus(a: Point, b: Point): Point;
     static plus(a: Point, b: Point): Point;

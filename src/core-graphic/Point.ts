@@ -19,6 +19,14 @@ export default class Point {
         return Point.isEqual(this, point)
     }
 
+    static deepClone(point: Point): Point {
+        return new Point(point.x, point.y)
+    }
+
+    deepClone(): Point {
+        return Point.deepClone(this)
+    }
+
     private static operator(op: string, a: Point, b: Point): Point {
         switch (op) {
             case "-":

@@ -15,6 +15,14 @@ export default class Size {
         }
     }
 
+    static cloneDeep(size: Size): Size {
+        return new Size({ width: size.width, height: size.height })
+    }
+
+    cloneDeep(): Size {
+        return Size.cloneDeep(this)
+    }
+
     static get zero() {
         return new Size({ width: 0, height: 0 })
     }

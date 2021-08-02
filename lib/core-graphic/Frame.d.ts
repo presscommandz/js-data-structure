@@ -1,5 +1,5 @@
-import Size from "src/core-graphic/Size";
-import Point from "src/core-graphic/Point";
+import Size from "@core-graphic/Size";
+import Point from "@core-graphic/Point";
 export default class Frame {
     x: number;
     y: number;
@@ -23,6 +23,8 @@ export default class Frame {
     get size(): Size;
     set size(value: Size);
     get isZero(): boolean;
+    static cloneDeep(frame: Frame): Frame;
+    cloneDeep(): Frame;
     isEqual(frame: Frame): boolean;
     static isEqual(frameA: Frame, frameB: Frame): boolean;
     intersect(frame: Frame): boolean;

@@ -79,6 +79,19 @@ export default class Frame {
         return Frame.isEqual(this, Frame.zero)
     }
 
+    static cloneDeep(frame: Frame): Frame {
+        return new Frame({
+            x: frame.x,
+            y: frame.y,
+            width: frame.width,
+            height: frame.height
+        })
+    }
+
+    cloneDeep(): Frame {
+        return Frame.cloneDeep(this)
+    }
+
     // utilities
 
     isEqual(frame: Frame): boolean {

@@ -6,6 +6,8 @@ export default class Size {
         height: number;
         size: Size;
     }>);
+    static cloneDeep(size: Size): Size;
+    cloneDeep(): Size;
     static get zero(): Size;
     static isEqual(sizeA: Size, sizeB: Size): boolean;
     isEqual(size: Size): boolean;
