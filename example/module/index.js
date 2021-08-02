@@ -4,8 +4,8 @@ const { Point, Frame, Size } = CoreGraphic
 
 let pointA = new Point(1, 2)
 let pointA1 = new Point()
-let pointx1 = Point.deepClone(pointA)
-let pointx2 = pointx1.deepClone()
+let pointx1 = Point.cloneDeep(pointA)
+let pointx2 = pointx1.cloneDeep()
 
 console.log(pointx1, pointx2)
 
