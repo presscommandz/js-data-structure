@@ -3,7 +3,8 @@
     "compilerOptions": {
         "allowJs": true,
         "paths": {
-            "@core-graphic/*": ["src/core-graphic/*"]
+            "@core-graphic/*": ["src/core-graphic/*"],
+            "@core/*": ["src/core/*"]
         },
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",

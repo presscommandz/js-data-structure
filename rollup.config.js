@@ -22,7 +22,8 @@ export default {
         alias({
             resolve: [".ts"],
             entries: {
-                "@core-graphic": "src/core-graphic"
+                "@core-graphic": "src/core-graphic",
+                "@core": "src/core"
             }
         })
     ]
