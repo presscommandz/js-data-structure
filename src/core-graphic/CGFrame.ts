@@ -67,7 +67,7 @@ export default class CGFrame implements Equatable {
     }
 
     get size(): CGSize {
-        const size = new CGSize({ width: this.width, height: this.height })
+        const size = new CGSize(this.width, this.height)
         return size
     }
 
