@@ -19,5 +19,5 @@ node node_modules/tfig/build/gift-cli.js \
     -r index \
     -n "@presscommandz/js-data-structure" \
     -o lib/typings/index.d.ts \
-    --config ./entries.json \
+    --config ./module-entries.json \
     -p false
