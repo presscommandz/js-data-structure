@@ -1,4 +1,8 @@
 import { CoreGraphic } from "@presscommandz/js-data-structure"
-import { CGFrame } from ""
+import { CGSize } from "@presscommandz/js-data-structure/core-graphic"
 
-const { CGPoint, CGSize } = CoreGraphic
+const { CGPoint } = CoreGraphic
+
+let x = new CGPoint(1, 1)
+
+console.log(x)
