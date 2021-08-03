@@ -1,8 +1,28 @@
 {
-    "extends": "./tsconfig-base.json",
+    "extends": "@tsconfig/node14/tsconfig.json",
     "compilerOptions": {
-        "module": "esnext",
-        "outDir": "lib/esm",
-        "target": "esnext"
-    }
+        "allowJs": true,
+        "paths": {
+            "@core-graphic/*": ["src/core-graphic/*"],
+            "@core/*": ["src/core/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "esModuleInterop": true,
+        "inlineSourceMap": false,
+        "module": "ES2015",
+        "lib": ["esnext", "DOM"],
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "moduleResolution": "node",
+        "pretty": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "strict": false,
+        "types": ["node"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/*"]
 }

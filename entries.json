@@ -1,0 +1,6 @@
+{
+    "entries": {
+        "@presscommandz/js-data-structure": "index",
+        "@presscommandz/js-data-structure/core-graphic": "core-graphic/index"
+    }
+}
