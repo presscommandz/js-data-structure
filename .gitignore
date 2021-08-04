@@ -121,4 +121,4 @@ dist
 lib
 
 # Example directories
-example/svelte/public/build
+yarn.lock

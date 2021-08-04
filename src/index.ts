@@ -1,1 +1,1 @@
-export const greeting = _ => console.log("hello world")
+export * as CoreGraphic from "@core-graphic/index"
