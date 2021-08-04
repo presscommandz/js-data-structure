@@ -1,0 +1,46 @@
+{
+    "name": "@presscommandz/js-data-structure",
+    "version": "1.0.0",
+    "description": "provide svelte component",
+    "main": "./lib/index.js",
+    "typings": "./lib/index.d.ts",
+    "exports": {
+        ".": "./lib/index.js",
+        "./core-graphic": "./lib/core-graphic/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/presscommandz/js-data-structure.git"
+    },
+    "files": [
+        "src",
+        "lib"
+    ],
+    "keywords": [],
+    "author": "PressCommandZ",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/presscommandz/js-data-structure/issues"
+    },
+    "scripts": {
+        "build": "./scripts/build.sh",
+        "prepublishOnly": "yarn build"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "homepage": "https://github.com/presscommandz/js-data-structure#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@tsconfig/node14": "^1.0.1",
+        "@types/node": "^16.4.10",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "eslint": "^7.30.0",
+        "prettier": "^2.3.2",
+        "tfig": "^3.1.1",
+        "tsc-alias": "^1.3.8",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.5"
+    }
+}

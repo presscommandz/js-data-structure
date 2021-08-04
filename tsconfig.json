@@ -1,0 +1,27 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "paths": {
+            "@core-graphic/*": ["src/core-graphic/*"],
+            "@core/*": ["src/core/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "declaration": false,
+        "esModuleInterop": true,
+        "inlineSourceMap": false,
+        "module": "CommonJS",
+        "lib": ["esnext", "DOM"],
+        "moduleResolution": "node",
+        "outDir": "lib",
+        "pretty": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "strict": false,
+        "types": ["node"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/*"]
+}
