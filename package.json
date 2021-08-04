@@ -2,18 +2,11 @@
     "name": "@presscommandz/js-data-structure",
     "version": "0.2.0",
     "description": "provide svelte component",
-    "main": "./lib/cjs/index.js",
-    "module": "./lib/esm/index.mjs",
-    "typings": "./lib/types/all.d.ts",
+    "main": "./lib/index.js",
+    "typings": "./lib/index.d.ts",
     "exports": {
-        ".": {
-            "import": "./lib/esm/index.js",
-            "require": "./lib/cjs/index.js"
-        },
-        "./core-graphic": {
-            "import": "./lib/esm/core-graphic/index.js",
-            "require": "./lib/cjs/core-graphic/index.js"
-        }
+        ".": "./lib/index.js",
+        "./core-graphic": "./lib/core-graphic/index.js"
     },
     "repository": {
         "type": "git",
