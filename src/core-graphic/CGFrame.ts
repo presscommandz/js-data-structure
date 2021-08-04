@@ -93,8 +93,6 @@ export default class CGFrame implements Equatable {
         return CGFrame.cloneDeep(this)
     }
 
-    // utilities
-
     isEqual(frame: CGFrame): boolean {
         return CGFrame.isEqual(this, frame)
     }
