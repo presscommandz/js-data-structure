@@ -1,6 +1,6 @@
 {
-    "name": "@presscommandz/js-data-structure",
-    "version": "1.0.0",
+    "name": "@hlworld/js-data-structure",
+    "version": "1.0.1",
     "description": "provide svelte component",
     "main": "./lib/index.js",
     "typings": "./lib/index.d.ts",
@@ -25,9 +25,6 @@
     "scripts": {
         "build": "./scripts/build.sh",
         "prepublishOnly": "yarn build"
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
     },
     "homepage": "https://github.com/presscommandz/js-data-structure#readme",
     "dependencies": {},
