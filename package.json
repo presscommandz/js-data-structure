@@ -1,5 +1,5 @@
 {
-    "name": "@presscommandz/js-data-structure",
+    "name": "@hlworld/js-data-structure",
     "version": "1.0.0",
     "description": "provide svelte component",
     "main": "./lib/index.js",
