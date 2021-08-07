@@ -4,6 +4,6 @@
         "dev": "node index.js"
     },
     "dependencies": {
-        "@presscommandz/js-data-structure": "../../"
+        "@hlworld/js-data-structure": "../../"
     }
 }

@@ -1,21 +1,21 @@
 {
     "name": "@hlworld/js-data-structure",
-    "version": "1.0.1-beta.0",
+    "version": "1.0.2",
     "description": "provide svelte component",
-    "main": "./lib/index.js",
-    "typings": "./lib/index.d.ts",
-    "exports": {
-        ".": "./lib/index.js",
-        "./core-graphic": "./lib/core-graphic/index.js"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/presscommandz/js-data-structure.git"
     },
     "files": [
-        "src",
-        "lib"
+        "index.js",
+        "index.d.ts",
+        "core",
+        "core-graphic"
     ],
+    "exports": {
+        ".": "./index.js",
+        "./core-graphic": "./core-graphic/index.js"
+    },
     "keywords": [],
     "author": "PressCommandZ",
     "license": "MIT",
@@ -38,6 +38,8 @@
         "tfig": "^3.1.1",
         "tsc-alias": "^1.3.8",
         "tslib": "^2.3.0",
-        "typescript": "^4.3.5"
+        "ttypescript": "^1.5.12",
+        "typescript": "^4.3.5",
+        "typescript-transform-paths": "^3.2.1"
     }
 }
