@@ -21,6 +21,13 @@ export default class CGPoint implements Equatable {
         return CGPoint.isEqual(this, point)
     }
 
+    static isApproximate(a: CGPoint, b: CGPoint, epsilon: number = 5): boolean {
+        const dx = Math.round(Math.abs(a.x - b.x))
+        const dy = Math.round(Math.abs(a.y - b.y))
+
+        return [dx, dy].every(d => d <= epsilon)
+    }
+
     static cloneDeep(point: CGPoint): CGPoint {
         return new CGPoint(point.x, point.y)
     }

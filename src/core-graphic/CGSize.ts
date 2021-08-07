@@ -29,6 +29,13 @@ export default class CGSize implements Equatable {
         return CGSize.isEqual(this, size)
     }
 
+    static isApproximate(a: CGSize, b: CGSize, epsilon: number = 5): boolean {
+        const dw = Math.round(Math.abs(a.width - b.width))
+        const dh = Math.round(Math.abs(a.height - b.height))
+
+        return [dw, dh].every(d => d <= epsilon)
+    }
+
     get isZero(): boolean {
         return CGSize.isEqual(this, CGSize.zero)
     }
