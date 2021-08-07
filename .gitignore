@@ -122,3 +122,9 @@ lib
 
 # Example directories
 yarn.lock
+
+# Build files
+/index.*js
+/*.d.ts
+/core
+/core-graphic
