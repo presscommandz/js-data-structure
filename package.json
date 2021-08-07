@@ -16,7 +16,12 @@
         ".": "./index.js",
         "./core-graphic": "./core-graphic/index.js"
     },
-    "keywords": [],
+    "keywords": [
+        "core-graphic",
+        "point",
+        "size",
+        "frame"
+    ],
     "author": "PressCommandZ",
     "license": "MIT",
     "bugs": {
