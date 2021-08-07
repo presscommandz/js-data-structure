@@ -1,6 +1,6 @@
 {
     "name": "@hlworld/js-data-structure",
-    "version": "1.0.2",
+    "version": "1.0.2+210807563",
     "description": "provide svelte component",
     "repository": {
         "type": "git",
