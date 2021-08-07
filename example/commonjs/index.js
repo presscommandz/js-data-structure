@@ -1,7 +1,7 @@
-const { CoreGraphic } = require("@presscommandz/js-data-structure")
-const { CGSize } = require("@presscommandz/js-data-structure/core-graphic")
+const { CoreGraphic } = require("@hlworld/js-data-structure")
+const { CGSize } = require("@hlworld/js-data-structure/core-graphic")
 
-const { CGPoint, CGFrame } = CoreGraphic
+const { CGPoint } = CoreGraphic
 
 let x = new CGPoint(1, 1)
 
