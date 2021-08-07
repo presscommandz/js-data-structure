@@ -3,5 +3,5 @@
 ## Installation
 
 ```bash
-yarn install @hlworld/js-data-structure
+yarn add @hlworld/js-data-structure
 ```
