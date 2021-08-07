@@ -3,18 +3,26 @@
     "compilerOptions": {
         "allowJs": true,
         "paths": {
-            "@core-graphic/*": ["src/core-graphic/*"],
-            "@core/*": ["src/core/*"]
+            "@core-graphic/*": ["./src/core-graphic/*"],
+            "@core/*": ["./src/core/*"]
         },
+        "plugins": [
+            { "transform": "typescript-transform-paths" },
+            {
+                "transform": "typescript-transform-paths",
+                "afterDeclarations": true
+            }
+        ],
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
-        "declaration": false,
+        "declaration": true,
+        // "declarationDir": "types",
         "esModuleInterop": true,
         "inlineSourceMap": false,
         "module": "CommonJS",
         "lib": ["esnext", "DOM"],
         "moduleResolution": "node",
-        "outDir": "lib",
+        "outDir": ".",
         "pretty": true,
         "resolveJsonModule": true,
         "rootDir": "src",

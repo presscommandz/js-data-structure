@@ -1,0 +1,17 @@
+{
+    "name": "webpack",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack",
+        "dev": "yarn build && node dist/bundle.js"
+    },
+    "dependencies": {
+        "@hlworld/js-data-structure": "../../"
+    },
+    "devDependencies": {
+        "webpack": "^4.46.0",
+        "webpack-cli": "4.7.2"
+    }
+}

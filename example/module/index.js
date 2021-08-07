@@ -1,5 +1,5 @@
-import { CoreGraphic } from "@presscommandz/js-data-structure"
-import { CGSize } from "@presscommandz/js-data-structure/core-graphic"
+import { CoreGraphic } from "@hlworld/js-data-structure"
+import { CGSize } from "@hlworld/js-data-structure/core-graphic"
 
 const { CGPoint } = CoreGraphic
 
