@@ -93,9 +93,6 @@ export default class CGFrame implements Equatable {
         return CGFrame.cloneDeep(this)
     }
 
-    isEqual(frame: CGFrame): boolean {
-        return CGFrame.isEqual(this, frame)
-    }
     static isEqual(frameA: CGFrame, frameB: CGFrame): boolean {
         return (
             frameA.x == frameB.x &&
@@ -103,6 +100,19 @@ export default class CGFrame implements Equatable {
             frameA.width == frameB.width &&
             frameA.height == frameB.height
         )
+    }
+
+    isEqual(frame: CGFrame): boolean {
+        return CGFrame.isEqual(this, frame)
+    }
+
+    static isApproximate(a: CGFrame, b: CGFrame, epsilon: number = 5): boolean {
+        const dx = Math.round(Math.abs(a.x - b.x))
+        const dy = Math.round(Math.abs(a.y - b.y))
+        const dw = Math.round(Math.abs(a.width - b.width))
+        const dh = Math.round(Math.abs(a.height - b.height))
+
+        return [dx, dy, dw, dh].every(d => d <= epsilon)
     }
 
     isIntersect(frame: CGFrame): boolean {
