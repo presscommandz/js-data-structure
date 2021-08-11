@@ -115,6 +115,21 @@ export default class CGFrame implements Equatable {
         return [dx, dy, dw, dh].every(d => d <= epsilon)
     }
 
+    static union(listFrame: CGFrame[]): CGFrame {
+        const frames = listFrame.filter(
+            frame => frame !== null && frame !== undefined
+        )
+        if (frames.length < 1) return CGFrame.zero
+
+        const x = Math.min(...frames.map(frame => frame.x))
+        const y = Math.min(...frames.map(frame => frame.y))
+        const w = Math.max(...frames.map(frame => frame.maxX)) - x
+        const h = Math.max(...frames.map(frame => frame.maxY)) - y
+
+        let frame = new CGFrame({ x: x, y: y, width: w, height: h })
+        return frame
+    }
+
     isIntersect(frame: CGFrame): boolean {
         return CGFrame.isIntersect(this, frame)
     }
